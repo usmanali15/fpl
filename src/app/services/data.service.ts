@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators';
+import { Data } from '../data/data';
 
 @Injectable({
     providedIn: 'root',
@@ -13,10 +14,10 @@ export class DataService {
 
     constructor(private http: HttpClient) {}
 
-    async getData() {
+    getData(): Observable<Data[]> {
         // await fetch(this.url).then((res) => {
         // console.log(res.json());
         //     });
-        return this.http.get<Data>(this.url);
+        return this.http.get<Data[]>(this.url);
     }
 }

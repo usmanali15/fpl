@@ -9,6 +9,8 @@
     <div class="mat-display-4">FPL DATA</div>
     <mat-card>
         <mat-card-title>CARD TITLE</mat-card-title>
-        <mat-card-content>CONTENT</mat-card-content>
+        <mat-card-content *ngFor="let val of data">{{
+            val.first_name
+        }}</mat-card-content>
     </mat-card>
 </body>
