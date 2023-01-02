@@ -15,6 +15,7 @@ export interface Data {
     form: string;
     id: number;
     in_dreamteam: boolean;
+    // news: string;
     news_added: string;
     now_cost: number;
     photo: string;
@@ -66,3 +67,5 @@ export interface Data {
     penalties_order: null;
     penalties_text: string;
 }
+
+// export interface Data {}
